@@ -1,0 +1,6 @@
+/node_modules
+/.pnp
+/prisma/migrations
+.pnp.js
+bun.lockb
+package-lock.json
