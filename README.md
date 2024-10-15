@@ -1,1 +1,4 @@
-# Technical-Test-Fanintek
+# Technical Test Fanintek
+## How To Run Back End
+### Install Dependencies
+```npm i```
