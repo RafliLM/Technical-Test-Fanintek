@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "da4d8d43-d896-44fd-856a-57ac9d62fcaa",
+		"name": "Tes Fanintek",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "17480277"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Sign Up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "// {\r\n//     \"name\": \"Supervisor\",\r\n//     \"email\": \"spy@email.com\",\r\n//     \"npp\": 11111,\r\n//     \"password\": \"supervisor\"\r\n// }\r\n\r\n{\r\n    \"name\": \"Ananda Bayu\",\r\n    \"email\": \"bayu@email.com\",\r\n    \"npp\": 12345,\r\n    \"npp_supervisor\": 11111,\r\n    \"password\": \"supervisor\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/auth/sign-up"
+					},
+					"response": []
+				},
+				{
+					"name": "Sign In",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"spy@email.com\",\r\n    \"password\": \"supervisor\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/auth/sign-in"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Epresence",
+			"item": [
+				{
+					"name": "Approve Epresence",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IlN1cGVydmlzb3IiLCJlbWFpbCI6InNweUBlbWFpbC5jb20iLCJucHAiOjExMTExLCJucHBfc3VwZXJ2aXNvciI6bnVsbCwiaWF0IjoxNzI4OTg3NjQwLCJleHAiOjE3MjkwMDkyNDB9.D4d7GQsPOehC2UkfLSMqLgzlNcpfqYVXApB90gzPEV8"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/epresence/:epresenceId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"epresence",
+								":epresenceId"
+							],
+							"variable": [
+								{
+									"key": "epresenceId",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Do Epresence",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IlN1cGVydmlzb3IiLCJlbWFpbCI6InNweUBlbWFpbC5jb20iLCJucHAiOjExMTExLCJucHBfc3VwZXJ2aXNvciI6bnVsbCwiaWF0IjoxNzI4OTg3NjQwLCJleHAiOjE3MjkwMDkyNDB9.D4d7GQsPOehC2UkfLSMqLgzlNcpfqYVXApB90gzPEV8"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"IN\",\r\n    \"waktu\": \"2024-10-15 17:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/epresence"
+					},
+					"response": []
+				},
+				{
+					"name": "Get epresence",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IlN1cGVydmlzb3IiLCJlbWFpbCI6InNweUBlbWFpbC5jb20iLCJucHAiOjExMTExLCJucHBfc3VwZXJ2aXNvciI6bnVsbCwiaWF0IjoxNzI4OTg3NjQwLCJleHAiOjE3MjkwMDkyNDB9.D4d7GQsPOehC2UkfLSMqLgzlNcpfqYVXApB90gzPEV8"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/epresence"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
